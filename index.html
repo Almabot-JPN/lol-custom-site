@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>カスタム戦績</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gate" class="gate" hidden>
+    <h1>カスタム戦績</h1>
+    <form id="gate-form">
+      <input id="password" type="password" placeholder="パスワード" autocomplete="current-password" required>
+      <label class="remember"><input id="remember" type="checkbox"> このブラウザに記憶する</label>
+      <button id="unlock" type="submit">ひらく</button>
+      <p id="error" class="error" role="alert"></p>
+    </form>
+  </div>
+  <div id="app" hidden>
+    <nav>
+      <a class="brand" href="#/">戦績</a>
+      <a href="#/players" data-tab="players">プレイヤー</a>
+      <a href="#/matches" data-tab="matches">試合</a>
+      <a href="#/champions" data-tab="champions">チャンピオン</a>
+      <a href="#/tier" data-tab="tier">tier</a>
+      <a href="#/records" data-tab="records">記録</a>
+      <a href="#/teams" data-tab="teams">チーム分け</a>
+    </nav>
+    <main id="view"></main>
+    <footer id="footer"></footer>
+  </div>
+  <script src="cover.js"></script>
+  <script src="teams.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
